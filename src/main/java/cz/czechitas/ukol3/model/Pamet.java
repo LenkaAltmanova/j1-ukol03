@@ -14,8 +14,6 @@ public class Pamet {
 
     @Override
     public String toString() {
-        return "Pamet{" +
-                "kapacita=" + kapacita +
-                '}';
+        return kapacita + " bajtů";
     }
 }

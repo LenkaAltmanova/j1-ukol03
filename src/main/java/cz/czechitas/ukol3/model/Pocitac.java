@@ -15,8 +15,7 @@ public class Pocitac {
 
     @Override
     public String toString() {
-        return "Pocitac{" +
-                "cpu=" + cpu +
+        return "cpu:" + cpu +
                 ", ram=" + ram +
                 ", pevnyDisk=" + pevnyDisk +
                 '}';

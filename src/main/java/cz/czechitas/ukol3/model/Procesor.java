@@ -26,10 +26,8 @@ public class Procesor {
 
     @Override
     public String toString() {
-        return "Procesor{" +
-                "vyrobce='" + vyrobce + '\'' +
-                ", rychlost=" + rychlost +
-                '}';
+        return  vyrobce + ", " + rychlost
+                ;
     }
 
     public void setRychlost() {

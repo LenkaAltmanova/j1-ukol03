@@ -8,7 +8,7 @@ public class Disk {
         return kapacita;
     }
 
-    public void setKapacita(Long kapacita) {
+    public void setKapacita(long kapacita) {
         this.kapacita = kapacita;
     }
 
@@ -16,15 +16,14 @@ public class Disk {
         return vyuziteMisto;
     }
 
-    public void setVyuziteMisto(Long vyuziteMisto) {
+    public void setVyuziteMisto(long vyuziteMisto) {
         this.vyuziteMisto = vyuziteMisto;
     }
 
     @Override
     public String toString() {
-        return "Disk{" +
-                "kapacita=" + kapacita +
-                ", vyuziteMisto=" + vyuziteMisto +
-                '}';
+        return
+                "kapacita:" + this.kapacita + " bajtů" + ", využité místo:" + this.vyuziteMisto + " bajtů";
+                }
     }
-}
+

@@ -25,6 +25,7 @@ public class HlavniProgram {
 
         Disk lencinDisk = new Disk();
         lencinDisk.setKapacita(2555554445454555L);
+        lencinDisk.setVyuziteMisto(2222222222222L);
 
         lencinPocitac.setCpu(lencinProcesor);
         lencinPocitac.setRam(lencinaPamet);
@@ -38,13 +39,6 @@ public class HlavniProgram {
         lencinPocitac.vypniSe();
 
 
-
-
-
-
-
-
-        //TODO tady bude váš kód - vytvoření instance třídy Pocitac, zapnutí, vpynutí, výpis hodnot.
         System.out.println("Program spuštěn.");
     }
 

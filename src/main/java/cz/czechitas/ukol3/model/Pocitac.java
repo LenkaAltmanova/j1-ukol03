@@ -54,13 +54,18 @@ public class Pocitac {
         if (jeZapnuty = true) {
             System.out.println("počítač je zapnutý");
         }
+        if (jeZapnuty = true) {
+            System.err.println("počítač nelze zapnout dvakrát");
+        }
     }
 
     public void vypniSe() {
         if (jeZapnuty = false) {
             System.out.println(" počítač je vypnutý");
         }
-
+        if (jeZapnuty = false){
+            System.err.println("");
+        }
     }
 
     /*

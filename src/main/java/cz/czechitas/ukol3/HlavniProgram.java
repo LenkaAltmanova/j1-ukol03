@@ -17,15 +17,15 @@ public class HlavniProgram {
         lencinPocitac.zapniSe();
 
         Procesor lencinProcesor = new Procesor();
-        lencinProcesor.setRychlost(3000000L);
+        lencinProcesor.setRychlost(3_000_000L);
         lencinProcesor.setVyrobce("Intel");
 
         Pamet lencinaPamet = new Pamet();
-        lencinaPamet.setKapacita(80000000L);
+        lencinaPamet.setKapacita(80_000_000L);
 
         Disk lencinDisk = new Disk();
-        lencinDisk.setKapacita(477000000L);
-        lencinDisk.setVyuziteMisto(125000000L);
+        lencinDisk.setKapacita(477_000_000L);
+        lencinDisk.setVyuziteMisto(125_000_000L);
 
         lencinPocitac.setCpu(lencinProcesor);
         lencinPocitac.setRam(lencinaPamet);
@@ -34,10 +34,10 @@ public class HlavniProgram {
         System.out.println(lencinPocitac.toString());
 
         lencinPocitac.zapniSe();
-
         System.out.println(lencinPocitac.toString());
-        lencinPocitac.vypniSe();
 
+        lencinPocitac.vypniSe();
+        lencinPocitac.vypniSe();
 
         System.out.println("Program spuštěn.");
     }

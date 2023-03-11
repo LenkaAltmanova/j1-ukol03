@@ -1,10 +1,10 @@
 package cz.czechitas.ukol3.model;
 
 public class Disk {
-    private Long kapacita;
-    private Long vyuziteMisto;
+    private long kapacita;
+    private long vyuziteMisto;
 
-    public Long getKapacita() {
+    public long getKapacita() {
         return kapacita;
     }
 
@@ -12,7 +12,7 @@ public class Disk {
         this.kapacita = kapacita;
     }
 
-    public Long getVyuziteMisto() {
+    public long getVyuziteMisto() {
         return vyuziteMisto;
     }
 

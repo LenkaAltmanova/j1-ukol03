@@ -12,15 +12,6 @@ public class Pocitac {
 
     private Disk pevnyDisk;
 
-
-    @Override
-    public String toString() {
-        return "cpu:" + cpu +
-                ", ram=" + ram +
-                ", pevnyDisk=" + pevnyDisk +
-                '}';
-    }
-
     public Procesor getCpu() {
         return cpu;
     }
@@ -44,29 +35,39 @@ public class Pocitac {
     public void setPevnyDisk(Disk pevnyDisk) {
         this.pevnyDisk = pevnyDisk;
     }
+    @Override
+    public String toString() {
+        return "cpu: " + cpu +
+                ", ram: " + ram +
+                ", pevnyDisk: " + pevnyDisk ;
+    }
+
 
 
     public boolean jeZapnuty() {
         return false;
     }
 
+
     public void zapniSe() {
-        if (jeZapnuty = true) {
-            System.out.println("počítač je zapnutý");
+        if (ram == null || cpu == null || pevnyDisk == null ) {
+            System.err.println("Počítač nelze zapnout bez všech komponentů");
         }
-        if (jeZapnuty = true) {
+
+        if (!jeZapnuty) {
+            jeZapnuty = true;
+            System.out.println("počítač je zapnutý");
+        }else {
             System.err.println("počítač nelze zapnout dvakrát");
         }
     }
 
     public void vypniSe() {
-        if (jeZapnuty = false) {
+        if (jeZapnuty == false) {
             System.out.println(" počítač je vypnutý");
         }
-        if (jeZapnuty = false){
-            System.err.println("");
         }
-    }
+
 
     /*
     První metoda bude vracet stav, zda je počítač zapnutý (hodnotu fieldu jeZapnuty).

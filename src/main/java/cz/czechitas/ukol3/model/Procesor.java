@@ -6,7 +6,7 @@ public class Procesor {
 
     private String vyrobce;
 
-    private Long rychlost;
+    private long rychlost;
 
     public String getVyrobce() {
         return vyrobce;
@@ -16,11 +16,11 @@ public class Procesor {
         this.vyrobce = vyrobce;
     }
 
-    public Long getRychlost() {
+    public long getRychlost() {
         return rychlost;
     }
 
-    public void setRychlost(Long rychlost) {
+    public void setRychlost(long rychlost) {
         this.rychlost = rychlost;
     }
 
@@ -30,7 +30,4 @@ public class Procesor {
                 ;
     }
 
-    public void setRychlost() {
-        this.rychlost = rychlost;
-    }
 }

@@ -12,6 +12,9 @@ public class Pocitac {
 
     private Disk pevnyDisk;
 
+    private long velikost;
+
+
     public Procesor getCpu() {
         return cpu;
     }
@@ -35,13 +38,21 @@ public class Pocitac {
     public void setPevnyDisk(Disk pevnyDisk) {
         this.pevnyDisk = pevnyDisk;
     }
+
+    public long getVelikost() {
+        return velikost;
+    }
+
+    public void setVelikost(long velikost) {
+        this.velikost = velikost;
+    }
+
     @Override
     public String toString() {
         return "cpu: " + cpu +
                 ", ram: " + ram +
                 ", pevnyDisk: " + pevnyDisk ;
     }
-
 
 
     public boolean jeZapnuty() {
@@ -66,7 +77,26 @@ public class Pocitac {
         if (jeZapnuty == false) {
             System.out.println(" počítač je vypnutý");
         }
+    }
+
+    public void vytvorSouborOVelikosti(long velikost) {
+        if (velikost + pevnyDisk.vyuziteMisto > pevnyDisk.kapacita)  {
+            System.err.println("Soubor nelze vytvořit");
+        } else {long soubor = velikost + pevnyDisk.vyuziteMisto;
         }
+        // metoda vytvorSouborOVelikosti zvýší proměnnou vyuziteMisto o velikost
+        //pokud by se soubor na disk nevešel (vyuziteMisto > kapacita), metoda vypíše chybu
+    }
+
+    public void vymazSouboryOVelikosti(long velikost) {
+        long vymazanySoubor = pevnyDisk.vyuziteMisto - velikost;
+        if (vymazanySoubor <= 0) {
+            System.out.println("soubory vymazány");
+        }
+
+        // metoda vymazSouboryOVelikosti sníží proměnnou vyuziteMisto o velikost, nesmí být menší než nula
+
+    }
 
 
     /*

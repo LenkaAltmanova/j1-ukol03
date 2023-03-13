@@ -39,6 +39,13 @@ public class HlavniProgram {
         lencinPocitac.vypniSe();
         lencinPocitac.vypniSe();
 
+        lencinPocitac.vytvorSouborOVelikosti(2000L);
+        System.out.println(lencinPocitac.toString());
+
+        lencinPocitac.vymazSouboryOVelikosti(2000L);
+        System.out.println(lencinPocitac.toString());
+
+
         System.out.println("Program spuštěn.");
     }
 

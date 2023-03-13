@@ -1,8 +1,8 @@
 package cz.czechitas.ukol3.model;
 
 public class Disk {
-    private long kapacita;
-    private long vyuziteMisto;
+    public long kapacita;
+    public long vyuziteMisto;
 
     public long getKapacita() {
         return kapacita;

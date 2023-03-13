@@ -42,7 +42,20 @@ public class HlavniProgram {
         lencinPocitac.vytvorSouborOVelikosti(2000L);
         System.out.println(lencinPocitac.toString());
 
-        lencinPocitac.vymazSouboryOVelikosti(2000L);
+        lencinPocitac.vymazSouboryOVelikosti(4000L);
+        System.out.println(lencinPocitac.toString());
+
+        lencinPocitac.zapniSe();
+        lencinPocitac.vytvorSouborOVelikosti(2000L);
+        System.out.println(lencinPocitac.toString());
+
+        lencinPocitac.vymazSouboryOVelikosti(4000L);
+        System.out.println(lencinPocitac.toString());
+
+        lencinPocitac.vymazSouboryOVelikosti(135002000L);
+        System.out.println(lencinPocitac.toString());
+
+        lencinPocitac.vytvorSouborOVelikosti(2000000000000L);
         System.out.println(lencinPocitac.toString());
 
 

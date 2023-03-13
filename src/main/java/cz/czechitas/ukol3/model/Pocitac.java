@@ -12,8 +12,6 @@ public class Pocitac {
 
     private Disk pevnyDisk;
 
-    private long velikost;
-
 
     public Procesor getCpu() {
         return cpu;
@@ -39,19 +37,12 @@ public class Pocitac {
         this.pevnyDisk = pevnyDisk;
     }
 
-    public long getVelikost() {
-        return velikost;
-    }
-
-    public void setVelikost(long velikost) {
-        this.velikost = velikost;
-    }
 
     @Override
     public String toString() {
         return "cpu: " + cpu +
                 ", ram: " + ram +
-                ", pevnyDisk: " + pevnyDisk ;
+                ", pevnyDisk: " + pevnyDisk;
     }
 
 
@@ -61,36 +52,52 @@ public class Pocitac {
 
 
     public void zapniSe() {
-        if (ram == null || cpu == null || pevnyDisk == null ) {
+        if (ram == null || cpu == null || pevnyDisk == null) {
             System.err.println("Počítač nelze zapnout bez všech komponentů");
+            return;
         }
 
         if (!jeZapnuty) {
             jeZapnuty = true;
             System.out.println("počítač je zapnutý");
-        }else {
+        } else {
             System.err.println("počítač nelze zapnout dvakrát");
         }
     }
 
     public void vypniSe() {
-        if (jeZapnuty == false) {
-            System.out.println(" počítač je vypnutý");
+        if (jeZapnuty == true) {
+            jeZapnuty = false;
+            System.out.println(" počítač se právě vypnul");
         }
     }
 
     public void vytvorSouborOVelikosti(long velikost) {
-        if (velikost + pevnyDisk.vyuziteMisto > pevnyDisk.kapacita)  {
+        if (jeZapnuty == false) {
+            System.err.println("Nelze vytvořit soubor, PC je vypnutý");
+            return;
+        }
+
+
+        if (velikost + pevnyDisk.getVyuziteMisto() > pevnyDisk.getKapacita()) {
             System.err.println("Soubor nelze vytvořit");
-        } else {long soubor = velikost + pevnyDisk.vyuziteMisto;
+        } else {
+            pevnyDisk.setVyuziteMisto(velikost + pevnyDisk.getVyuziteMisto());
         }
         // metoda vytvorSouborOVelikosti zvýší proměnnou vyuziteMisto o velikost
         //pokud by se soubor na disk nevešel (vyuziteMisto > kapacita), metoda vypíše chybu
     }
 
     public void vymazSouboryOVelikosti(long velikost) {
-        long vymazanySoubor = pevnyDisk.vyuziteMisto - velikost;
-        if (vymazanySoubor <= 0) {
+
+        if (jeZapnuty == false) {
+            System.err.println("Nelze smazat soubor, PC je vypnutý");
+            return;
+        }
+
+        long aktualniKapacita = pevnyDisk.getVyuziteMisto() - velikost;
+        if (aktualniKapacita >= 0) {
+            pevnyDisk.setVyuziteMisto(pevnyDisk.getVyuziteMisto() - velikost);
             System.out.println("soubory vymazány");
         }
 

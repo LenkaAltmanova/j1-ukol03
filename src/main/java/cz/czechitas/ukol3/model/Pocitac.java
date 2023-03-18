@@ -47,7 +47,7 @@ public class Pocitac {
 
 
     public boolean jeZapnuty() {
-        return false;
+        return jeZapnuty;
     }
 
 
@@ -84,8 +84,7 @@ public class Pocitac {
         } else {
             pevnyDisk.setVyuziteMisto(velikost + pevnyDisk.getVyuziteMisto());
         }
-        // metoda vytvorSouborOVelikosti zvýší proměnnou vyuziteMisto o velikost
-        //pokud by se soubor na disk nevešel (vyuziteMisto > kapacita), metoda vypíše chybu
+
     }
 
     public void vymazSouboryOVelikosti(long velikost) {
@@ -97,22 +96,13 @@ public class Pocitac {
 
         long aktualniKapacita = pevnyDisk.getVyuziteMisto() - velikost;
         if (aktualniKapacita >= 0) {
-            pevnyDisk.setVyuziteMisto(pevnyDisk.getVyuziteMisto() - velikost);
+            pevnyDisk.setVyuziteMisto(aktualniKapacita);
             System.out.println("soubory vymazány");
         }
 
-        // metoda vymazSouboryOVelikosti sníží proměnnou vyuziteMisto o velikost, nesmí být menší než nula
 
     }
 
 
-    /*
-    První metoda bude vracet stav, zda je počítač zapnutý (hodnotu fieldu jeZapnuty).
-    Další dvě metody budou počítač zapínat resp. vypínat, tj. budou nastavovat proměnnou (field)
-    jeZapnuty a do konzole vypíšou odpovídající informaci.
-    Počítač není možno zapnout dvakrát. Při takovém pokusu vypište chybovou hlášku.
-    Počítač je možno vypnout vícekrát, ale opakované volání metody vypniSe() se ignoruje.
-
-     */
 
 }

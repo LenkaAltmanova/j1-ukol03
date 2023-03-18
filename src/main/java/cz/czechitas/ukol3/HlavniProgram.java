@@ -59,7 +59,6 @@ public class HlavniProgram {
         System.out.println(lencinPocitac.toString());
 
 
-        System.out.println("Program spuštěn.");
     }
 
 }
